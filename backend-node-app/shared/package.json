@@ -1,0 +1,11 @@
+{
+  "name": "backend-shared",
+  "version": "1.0.0",
+  "private": true,
+  "main": "config.js",
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "pg": "^8.11.3"
+  }
+}
+
