@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard-service
+  namespace: fullstack
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dashboard-service
+  template:
+    metadata:
+      labels:
+        app: dashboard-service
+    spec:
+      containers:
+      - name: dashboard-service
+        image: vineetsaini13/dashboard:v1
+        env:
+        - name: DB_HOST
+          value: postgres
+        - name: DB_USER
+          value: admin
+        - name: DB_PASS
+          value: admin123
+        ports:
+        - containerPort: 3000

@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: setting-service
+  namespace: fullstack
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: setting-service
+  template:
+    metadata:
+      labels:
+        app: setting-service
+    spec:
+      containers:
+      - name: setting-service
+        image: vineetsaini13/settings:v1
+        env:
+        - name: DB_HOST
+          value: postgres
+        - name: DB_USER
+          value: admin
+        - name: DB_PASS
+          value: admin123
+        ports:
+        - containerPort: 3000
