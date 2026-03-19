@@ -18,10 +18,10 @@ spec:
         image: postgres:16-alpine
         env:
         - name: POSTGRES_DB
-          value: appdb
+          value: microservices_db
         - name: POSTGRES_USER
-          value: admin
+          value: postgres
         - name: POSTGRES_PASSWORD
-          value: admin123
+          value: postgres
         ports:
         - containerPort: 5432

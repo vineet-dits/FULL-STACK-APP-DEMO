@@ -17,11 +17,19 @@ spec:
       - name: user-service
         image: vineetsaini13/user-service:v1
         env:
-        - name: DB_HOST
+        - name: PORT
+          value: "3001"
+        - name: POSTGRES_HOST
           value: postgres
-        - name: DB_USER
-          value: admin
-        - name: DB_PASS
-          value: admin123
+        - name: POSTGRES_PORT
+          value: "5432"
+        - name: POSTGRES_DB
+          value: microservices_db
+        - name: POSTGRES_USER
+          value: postgres
+        - name: POSTGRES_PASSWORD
+          value: postgres
+        - name: JWT_SECRET
+          value: dev-secret-change-me
         ports:
-        - containerPort: 3000
+        - containerPort: 3001
