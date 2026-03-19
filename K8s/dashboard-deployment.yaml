@@ -19,15 +19,15 @@ spec:
         env:
         - name: PORT
           value: "3002"
-        - name: POSTGRES_HOST
+        - name: DB_HOST
           value: postgres
-        - name: POSTGRES_PORT
+        - name: DB_PORT
           value: "5432"
-        - name: POSTGRES_DB
+        - name: DB_NAME
           value: microservices_db
-        - name: POSTGRES_USER
+        - name: DB_USER
           value: postgres
-        - name: POSTGRES_PASSWORD
+        - name: DB_PASSWORD
           value: postgres
         - name: JWT_SECRET
           value: dev-secret-change-me
